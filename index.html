@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freshly Baked Croissants</title>
+    <title>Home Made Fresh Foods Menu</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -11,103 +11,166 @@
             padding: 0;
             background-color: #fff9f2;
             color: #333;
-            text-align: center;
         }
         header {
             background-color: #d38c3c;
             color: white;
-            padding: 20px 0;
+            text-align: center;
+            padding: 25px 10px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-size: 2.2em;
         }
-        .hero {
-            padding: 50px 20px;
-            background-image: linear-gradient(to bottom, #d38c3c, #f4a460);
-            color: white;
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.1em;
         }
-        .hero h2 {
-            font-size: 3em;
-            margin: 10px 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 15px;
         }
-        .hero p {
-            font-size: 1.2em;
+        .notice-bar {
+            background-color: #ffeaa7;
+            border: 1px solid #fdcb6e;
+            padding: 12px;
+            text-align: center;
+            border-radius: 8px;
             font-weight: bold;
+            margin-bottom: 25px;
+            color: #d63031;
         }
-        .offer-card {
-            background-color: white;
-            width: 80%;
-            max-width: 400px;
-            margin: -30px auto 30px;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-            border: 3px solid #d38c3c;
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
-        .offer-card h3 {
-            color: #d38c3c;
-            font-size: 1.8em;
-            margin-top: 0;
+        .food-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 1px solid #ffe5d9;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        .price {
-            font-size: 2em;
-            font-weight: bold;
+        .food-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .food-details {
+            padding: 15px;
+            text-align: center;
+        }
+        .food-title {
+            font-size: 1.3em;
+            margin: 0 0 8px;
             color: #2c3e50;
-            margin: 15px 0;
         }
-        .btn {
+        .food-desc {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .food-price {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #d38c3c;
+            margin-bottom: 15px;
+        }
+        .btn-order {
             display: inline-block;
             background-color: #27ae60;
             color: white;
-            padding: 15px 30px;
-            font-size: 1.2em;
+            padding: 10px 20px;
             text-decoration: none;
-            border-radius: 30px;
+            border-radius: 25px;
             font-weight: bold;
-            transition: background 0.3s;
-            margin-top: 15px;
+            font-size: 0.9em;
         }
-        .btn:hover {
+        .btn-order:hover {
             background-color: #219150;
         }
         footer {
             background-color: #2c3e50;
             color: white;
+            text-align: center;
             padding: 15px 0;
-            margin-top: 50px;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Croissant Bakery</h1>
+        <h1>Home Made Fresh Kitchen</h1>
+        <p>Ghar Ka Saaf Aur Mazedar Khana</p>
     </header>
 
-    <div class="hero">
-        <h2>FRESHLY BAKED</h2>
-        <p>Up to 50% Off - Order Now!</p>
-    </div>
-
-    <div class="offer-card">
-        <h3>Special Daily Deal</h3>
-        <p style="font-size: 1.2em; font-weight: bold;">4 Croissants + 1 FREE!</p>
-        <div class="price">Only 650 PKR</div>
-        <p>Garam, naram aur mazedar croissants abhi order karein!</p>
+    <div class="container">
         
-        <!-- Apne WhatsApp number ko yahan update karein (923XXXXXXXXX format mein) -->
-        <a href="https://wa.me/923290334083?text=Salam! Main 650 PKR wali 4+1 Free Croissant deal order karna chahta hoon." class="btn" target="_blank">
-            WhatsApp Par Order Karein
-        </a>
+        <!-- Delivery Charges Notice -->
+        <div class="notice-bar">
+            🛵 Delivery Charges: 150 PKR (All over city) | Free Delivery on orders above 2000 PKR!
+        </div>
+
+        <h2 style="text-align:center; color: #d38c3c;">Hamara Menu</h2>
+
+        <div class="menu-grid">
+
+            <!-- Item 1 -->
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500" alt="Special Croissants" class="food-img">
+                <div class="food-details">
+                    <h3 class="food-title">Butter Croissants (4 Pcs)</h3>
+                    <p class="food-desc">Freshly baked naram aur crunchy butter croissants.</p>
+                    <div class="food-price">650 PKR</div>
+                    <a href="https://wa.me/923290334083?text=Salam! Main 4 Pcs Butter Croissants (650 PKR) order karna chahta hoon." class="btn-order" target="_blank">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500" alt="Chicken Biryani" class="food-img">
+                <div class="food-details">
+                    <h3 class="food-title">Chicken Chicken Biryani</h3>
+                    <p class="food-desc">Ghar ke masalon se bani hui special Karachi Biryani (Single Plate).</p>
+                    <div class="food-price">350 PKR</div>
+                    <a href="https://wa.me/923290334083?text=Salam! Main Chicken Biryani (350 PKR) order karna chahta hoon." class="btn-order" target="_blank">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500" alt="Zinger Burger" class="food-img">
+                <div class="food-details">
+                    <h3 class="food-title">Home-made Zinger Burger</h3>
+                    <p class="food-desc">Crispy chicken patty, sauce aur fries ke sath.</p>
+                    <div class="food-price">450 PKR</div>
+                    <a href="https://wa.me/923290334083?text=Salam! Main Zinger Burger (450 PKR) order karna chahta hoon." class="btn-order" target="_blank">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500" alt="Chicken Pizza" class="food-img">
+                <div class="food-details">
+                    <h3 class="food-title">Chicken Tikka Pizza (Medium)</h3>
+                    <p class="food-desc">Cheesy aur topping se bhara hua home-baked pizza.</p>
+                    <div class="food-price">950 PKR</div>
+                    <a href="https://wa.me/923290334083?text=Salam! Main Medium Pizza (950 PKR) order karna chahta hoon." class="btn-order" target="_blank">WhatsApp Order</a>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 Croissant Bakery. All Rights Reserved.</p>
+        <p>&copy; 2026 Home Made Fresh Foods. All Rights Reserved.</p>
     </footer>
 
 </body>
